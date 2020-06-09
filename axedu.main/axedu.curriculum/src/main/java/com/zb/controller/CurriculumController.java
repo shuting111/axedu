@@ -1,10 +1,13 @@
 package com.zb.controller;
 
+import com.zb.pojo.Curriculum;
 import com.zb.service.CurriculumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author 王淑婷
@@ -26,5 +29,11 @@ public class CurriculumController {
     @GetMapping("/CurriculmToRedis")
     public void CurriculmToRedis(){
         curriculumService.CurriculmToRedis();
+    }
+
+    //前台显示猜你喜欢
+    @GetMapping("/findLike")
+    public List<Curriculum> findLike(){
+        return curriculumService.findLike();
     }
 }

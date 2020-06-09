@@ -49,6 +49,8 @@ public class Curriculum implements Serializable {
     private String createtime;
     //点击量
     private Integer hits=0;
+
+    private Integer like;
     //get set 方法
     public Area getArea() {
         return area;
@@ -56,6 +58,14 @@ public class Curriculum implements Serializable {
 
     public void setArea(Area area) {
         this.area = area;
+    }
+
+    public Integer getLike() {
+        return like;
+    }
+
+    public void setLike(Integer like) {
+        this.like = like;
     }
 
     public String getCreatetime() {

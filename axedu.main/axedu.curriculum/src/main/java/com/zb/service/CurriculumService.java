@@ -15,6 +15,8 @@ public interface CurriculumService {
 
     public void IncreaseHits(Integer id);
 
+    public List<Curriculum> findLike();
+
 
 
 

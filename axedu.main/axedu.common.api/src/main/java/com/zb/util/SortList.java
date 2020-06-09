@@ -1,11 +1,6 @@
 package com.zb.util;
 
-/**
- * @author 王淑婷
- * @Description TODO
- * @Date 2020/6/6
- * @Version V1.0
- */
+
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -16,8 +11,10 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * java工具类之按对象中某属性排序
- * @author李坤 交流博客:http://blog.csdn.net/lk_blog
+ * @author 王淑婷
+ * @Description TODO
+ * @Date 2020/6/6
+ * @Version V1.0
  */
 public class SortList {
 

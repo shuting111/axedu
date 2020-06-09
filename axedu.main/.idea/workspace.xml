@@ -1,7 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d46b49e9-03d2-4af5-b43d-60625661a8fe" name="Default Changelist" comment="" />
+    <list default="true" id="d46b49e9-03d2-4af5-b43d-60625661a8fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_2_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_1_5_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/config/RedisConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/config/Swagger2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/dto/Dto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/dto/DtoUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/dto/Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/BigDecimalUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/BigDecimalUtil$BigDecimalOprations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/BigDecimalUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$ErrorCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$MessageStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$OrderStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$QgStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$QueueName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$Redis_Expire.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$StockStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$User_AUTH.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants$WxpayStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Constants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/DateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/EmptyUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/IdWorker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/MD5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/OrderCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/RedisUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/SortList$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/SortList$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/SortList$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/SortList$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/SortList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Status$ExpireEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/util/Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/vo/EshopException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum.api/target/classes/com/zb/config/RabbitConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum.api/target/classes/com/zb/pojo/Area.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum.api/target/classes/com/zb/pojo/Curriculum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/resources/ehcache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/CurriculumApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/controller/CurriculumController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/mapper/AreaMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/mapper/CurriculumMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/service/CurriculumService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/service/impl/CurriculumServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/ehcache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/mapper/AreaMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/mapper/CurriculumMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.eureka/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.eureka/target/classes/com/zb/MyEurekaServerApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.common.api/src/main/java/com/zb/util/SortList.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.common.api/src/main/java/com/zb/util/SortList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum.api/src/main/java/com/zb/pojo/Curriculum.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum.api/src/main/java/com/zb/pojo/Curriculum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/axedu.curriculum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/axedu.curriculum.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/CurriculumApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/CurriculumApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/controller/CurriculumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/controller/CurriculumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/CurriculumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/CurriculumService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/impl/CurriculumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/impl/CurriculumServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/resources/mapper/CurriculumMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/resources/mapper/CurriculumMapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +80,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1cnIAZcEA0Lai0B0qtI4FhqdpH9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,15 +100,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/axedu.common.api/src/main/java/com/zb/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/axedu.curriculum/src/main/resources/mapper" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.common.api\src\main\java\com\zb\config" />
-      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.common.api\src\main\java\com\zb\util" />
-      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.curriculum\src\main\resources\mapper" />
-      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.gateway\src\main\resources" />
-      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.eureka\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.curriculum\src\main\java\com\zb\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zb.util" />
@@ -51,18 +113,22 @@
       <recent name="com.zb.mapper" />
       <recent name="com.zb" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.curriculum\src\main\java\com\zb\mapper" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\testgit\axedu.main\axedu.curriculum\src\main\resources\mapper" />
+      <recent name="F:\testgit\axedu.main\axedu.curriculum\src\main\resources" />
+      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.common.api\src\main\java\com\zb\config" />
+      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.common.api\src\main\java\com\zb\util" />
+      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.curriculum\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RestServicesNavigator">
     <treeState>
       <expand>
         <path>
-          <item name="Found 2 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 3 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
         <path>
-          <item name="Found 2 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 3 services " type="fcff1e1b:RestServiceStructure$RootNode" />
           <item name="axedu.curriculum" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
@@ -73,6 +139,13 @@
     <configuration name="CurriculumApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="axedu.curriculum" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.CurriculumApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServerApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="axedu.gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.GatewayServerApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,6 +200,8 @@
       <workItem from="1591599214451" duration="2342000" />
       <workItem from="1591620745449" duration="7497000" />
       <workItem from="1591663518256" duration="9236000" />
+      <workItem from="1591676634141" duration="9434000" />
+      <workItem from="1591706546924" duration="1816000" />
     </task>
     <servers />
   </component>
@@ -134,10 +209,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1591623890239">
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1591696099772">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1591623890239" />
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1591696099772" />
     <state x="534" y="256" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1591276967237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -146,38 +221,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591622548975" />
-    <state width="1323" height="305" key="GridCell.Tab.0.bottom" timestamp="1591670469800">
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom" timestamp="1591708348878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="305" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591670469800" />
-    <state width="1323" height="305" key="GridCell.Tab.0.center" timestamp="1591670469800">
+    <state width="1323" height="162" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591708348878" />
+    <state width="1323" height="162" key="GridCell.Tab.0.center" timestamp="1591708348878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="305" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591670469800" />
-    <state width="1323" height="305" key="GridCell.Tab.0.left" timestamp="1591670469800">
+    <state width="1323" height="162" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591708348878" />
+    <state width="1323" height="162" key="GridCell.Tab.0.left" timestamp="1591708348878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="305" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591670469800" />
-    <state width="1323" height="305" key="GridCell.Tab.0.right" timestamp="1591670469800">
+    <state width="1323" height="162" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591708348878" />
+    <state width="1323" height="162" key="GridCell.Tab.0.right" timestamp="1591708348878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="305" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591670469800" />
-    <state width="1323" height="18" key="GridCell.Tab.1.bottom" timestamp="1591670336918">
+    <state width="1323" height="162" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591708348878" />
+    <state width="1323" height="162" key="GridCell.Tab.1.bottom" timestamp="1591708348878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="18" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591670336918" />
-    <state width="1323" height="18" key="GridCell.Tab.1.center" timestamp="1591670336918">
+    <state width="1323" height="162" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591708348878" />
+    <state width="1323" height="162" key="GridCell.Tab.1.center" timestamp="1591708348878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="18" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591670336918" />
-    <state width="1323" height="18" key="GridCell.Tab.1.left" timestamp="1591670336918">
+    <state width="1323" height="162" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591708348878" />
+    <state width="1323" height="162" key="GridCell.Tab.1.left" timestamp="1591708348878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="18" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591670336918" />
-    <state width="1323" height="18" key="GridCell.Tab.1.right" timestamp="1591670336918">
+    <state width="1323" height="162" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591708348878" />
+    <state width="1323" height="162" key="GridCell.Tab.1.right" timestamp="1591708348878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="18" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591670336918" />
+    <state width="1323" height="162" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591708348878" />
     <state width="1323" height="18" key="GridCell.Tab.2.bottom" timestamp="1591670336928">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -194,10 +269,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="18" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1591670336928" />
-    <state x="263" y="101" key="IDE.errors.dialog" timestamp="1591666179316">
+    <state x="263" y="101" key="IDE.errors.dialog" timestamp="1591708358292">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="101" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1591666179316" />
+    <state x="263" y="101" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1591708358292" />
     <state x="375" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1591599217113">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -210,16 +285,5 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591621717353" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/impl/CurriculumServiceImpl.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

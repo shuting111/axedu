@@ -7,6 +7,7 @@ import com.zb.mapper.CurriculumMapper;
 import com.zb.pojo.Curriculum;
 import com.zb.service.CurriculumService;
 import com.zb.util.RedisUtil;
+import com.zb.util.SortList;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author 王淑婷
@@ -53,6 +55,29 @@ public class CurriculumServiceImpl implements CurriculumService {
         param.put("curriculumId",id);
         amqpTemplate.convertAndSend(RabbitConfig.EXCHANGE_TOPIC_INFORM,"inform.curriculum",param);
     }
+
+    @Override
+    public List<Curriculum> findLike() {
+        Map<String,Object> param = new HashMap<>();
+        param.put("like",1);
+        List<Curriculum> list = null;
+        String key = "likeCurriculum";
+        if(redisUtils.hasKey(key)){
+            System.out.println("查询redis");
+            String jsonobj = redisUtils.get(key).toString();
+            list = JSON.parseArray(jsonobj, Curriculum.class);
+        }else {
+            System.out.println("从数据库中查询");
+            try {
+                list = curriculumMapper.getCurriculumListByMap(param);
+                redisUtils.set(key,JSON.toJSONString(list),24*60*60);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return list;
+    }
+
     //监听  增加点击量发起的队列
     @RabbitListener(queues = RabbitConfig.QUEUE_room)
     public void reciveHits(Map<String,Object> param, Message message, Channel channel){
@@ -71,9 +96,24 @@ public class CurriculumServiceImpl implements CurriculumService {
             redisUtils.set("curriculum", JSON.toJSONString(list));
         }
     }
-    @Scheduled(cron = "00 00 00 * * ?")
+
+    @Scheduled(cron = "21 16 00 * * ?")
     public void guessLike(){
         String curriculum = redisUtils.get("curriculum").toString();
         List<Curriculum> list = JSON.parseArray(curriculum,Curriculum.class);
+        SortList.sort(list, "hits", SortList.DESC);
+        for (int i = 0;i<list.size();i++) {
+            Curriculum c = list.get(i);
+            if(i<5){
+                c.setLike(1);
+            }else {
+                c.setLike(0);
+            }
+            try {
+                curriculumMapper.updateCurriculum(c);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
