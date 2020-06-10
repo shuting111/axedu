@@ -2,30 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d46b49e9-03d2-4af5-b43d-60625661a8fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/axedu.common.api/axedu.common.api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.curriculum.api/axedu.curriculum.api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.curriculum.api/src/main/java/com/zb/feign/CurriculumFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.curriculum/axedu.curriculum.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.eureka/axedu.eureka.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.gateway/axedu.gateway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.order.api/axedu.order.api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.order/axedu.order.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.school.api/axedu.school.api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.school/axedu.school.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.user.api/axedu.user.api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axedu.user/axedu.user.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum.api/src/main/java/com/zb/pojo/Grade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum.api/src/main/java/com/zb/pojo/GradeSubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum.api/src/main/java/com/zb/pojo/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/mapper/GradeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/mapper/SubjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/GradeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/impl/GradeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/resources/mapper/GradeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/resources/mapper/SubjectMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axedu.common.api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.common.api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axedu.common.api/src/main/java/com/zb/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.common.api/src/main/java/com/zb/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.common.api/target/classes/com/zb/config/RedisConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/axedu.curriculum.api/src/main/java/com/zb/pojo/Curriculum.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum.api/src/main/java/com/zb/pojo/Curriculum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axedu.curriculum.api/target/classes/com/zb/pojo/Curriculum.class" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum.api/target/classes/com/zb/pojo/Curriculum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/controller/CurriculumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/controller/CurriculumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/CurriculumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/CurriculumService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/impl/CurriculumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/impl/CurriculumServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/axedu.curriculum/src/main/resources/mapper/CurriculumMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/src/main/resources/mapper/CurriculumMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axedu.curriculum/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/controller/CurriculumController.class" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/controller/CurriculumController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/service/CurriculumService.class" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/service/CurriculumService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/service/impl/CurriculumServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/com/zb/service/impl/CurriculumServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/axedu.curriculum/target/classes/mapper/CurriculumMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/axedu.curriculum/target/classes/mapper/CurriculumMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,23 +70,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/axedu.common.api/src/main/java/com/zb/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/axedu.curriculum/src/main/resources/mapper" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\testgit\axedu.main\axedu.common.api\src\main\java\com\zb\config" />
       <recent name="F:\testgit\axedu.main\axedu.curriculum\src\main\resources\mapper" />
+      <recent name="F:\testgit\axedu.main\axedu.curriculum\src\main\java\com\zb\mapper" />
+      <recent name="F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\pojo" />
+      <recent name="F:\testgit\axedu.main\axedu.common.api\src\main\java\com\zb\config" />
       <recent name="F:\testgit\axedu.main\axedu.curriculum\src\main\resources" />
-      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.common.api\src\main\java\com\zb\config" />
-      <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.common.api\src\main\java\com\zb\util" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zb.util" />
-      <recent name="com.zb.config" />
       <recent name="com.zb.pojo" />
+      <recent name="com.zb.form" />
+      <recent name="com.zb.feign" />
+      <recent name="com.zb.service" />
       <recent name="com.zb.mapper" />
-      <recent name="com.zb" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\Administrator\IdeaProjects\axedu.main\axedu.curriculum\src\main\java\com\zb\mapper" />
@@ -180,7 +174,9 @@
       <workItem from="1591676634141" duration="9434000" />
       <workItem from="1591706546924" duration="6984000" />
       <workItem from="1591714332676" duration="77000" />
-      <workItem from="1591749976839" duration="6966000" />
+      <workItem from="1591749976839" duration="9746000" />
+      <workItem from="1591775381904" duration="3304000" />
+      <workItem from="1591792293970" duration="5867000" />
     </task>
     <task id="LOCAL-00001" summary="modify by wst">
       <created>1591708524943</created>
@@ -196,7 +192,28 @@
       <option name="project" value="LOCAL" />
       <updated>1591709338917</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="modify by wst  200610">
+      <created>1591770358435</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591770358435</updated>
+    </task>
+    <task id="LOCAL-00004" summary="唯一查询的接口">
+      <created>1591772192258</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591772192258</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test是占位类，保留文件夹的">
+      <created>1591777055853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591777055853</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,13 +222,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modify by wst" />
     <MESSAGE value="modify by wst  test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify by wst  test commit" />
+    <MESSAGE value="modify by wst  200610" />
+    <MESSAGE value="唯一查询的接口" />
+    <MESSAGE value="test是占位类，保留文件夹的" />
+    <option name="LAST_COMMIT_MESSAGE" value="test是占位类，保留文件夹的" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1591712629851">
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1591798364001">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1591712629851" />
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1591798364001" />
     <state x="534" y="256" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1591276967237">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -220,42 +240,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591622548975" />
-    <state x="197" y="0" key="CommitChangelistDialog2" timestamp="1591709335989">
+    <state x="197" y="0" key="CommitChangelistDialog2" timestamp="1591799115666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="197" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591709335989" />
-    <state width="1323" height="375" key="GridCell.Tab.0.bottom" timestamp="1591714312230">
+    <state x="197" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591799115666" />
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom" timestamp="1591799115713">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="375" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591714312230" />
-    <state width="1323" height="375" key="GridCell.Tab.0.center" timestamp="1591714312230">
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591799115713" />
+    <state width="1323" height="191" key="GridCell.Tab.0.center" timestamp="1591799115712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="375" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591714312230" />
-    <state width="1323" height="375" key="GridCell.Tab.0.left" timestamp="1591714312229">
+    <state width="1323" height="191" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591799115712" />
+    <state width="1323" height="191" key="GridCell.Tab.0.left" timestamp="1591799115712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="375" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591714312229" />
-    <state width="1323" height="375" key="GridCell.Tab.0.right" timestamp="1591714312230">
+    <state width="1323" height="191" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591799115712" />
+    <state width="1323" height="191" key="GridCell.Tab.0.right" timestamp="1591799115713">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="375" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591714312230" />
-    <state width="1323" height="375" key="GridCell.Tab.1.bottom" timestamp="1591714312230">
+    <state width="1323" height="191" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591799115713" />
+    <state width="1323" height="214" key="GridCell.Tab.1.bottom" timestamp="1591798958089">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="375" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591714312230" />
-    <state width="1323" height="375" key="GridCell.Tab.1.center" timestamp="1591714312230">
+    <state width="1323" height="214" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591798958089" />
+    <state width="1323" height="214" key="GridCell.Tab.1.center" timestamp="1591798958088">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="375" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591714312230" />
-    <state width="1323" height="375" key="GridCell.Tab.1.left" timestamp="1591714312230">
+    <state width="1323" height="214" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591798958088" />
+    <state width="1323" height="214" key="GridCell.Tab.1.left" timestamp="1591798958088">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="375" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591714312230" />
-    <state width="1323" height="375" key="GridCell.Tab.1.right" timestamp="1591714312230">
+    <state width="1323" height="214" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591798958088" />
+    <state width="1323" height="214" key="GridCell.Tab.1.right" timestamp="1591798958088">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="375" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591714312230" />
+    <state width="1323" height="214" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591798958088" />
     <state width="1323" height="375" key="GridCell.Tab.2.bottom" timestamp="1591714312230">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -272,10 +292,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="375" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1591714312230" />
-    <state x="263" y="101" key="IDE.errors.dialog" timestamp="1591760196808">
+    <state x="263" y="101" key="IDE.errors.dialog" timestamp="1591782935187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="101" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1591760196808" />
+    <state x="263" y="101" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1591782935187" />
     <state x="129" y="55" key="MergeDialog" timestamp="1591755234320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -288,18 +308,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591755757362" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1591709582953">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1591777146720">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591709582953" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591777146720" />
     <state x="375" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1591599217113">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="375" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1591599217113" />
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591755080644">
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591799051050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1591755080644" />
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1591799051050" />
     <state x="115" y="128" key="new project wizard" timestamp="1591277265536">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -314,7 +334,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/axedu.curriculum/src/main/java/com/zb/service/impl/CurriculumServiceImpl.java</url>
-          <line>137</line>
+          <line>144</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -13,8 +13,12 @@ public class Curriculum implements Serializable {
     private String className;
     //科目id
     private Integer subjectId;
+    //科目
+    private String subName;
     //年级id
     private Integer gradeId;
+    //年级名称
+    private String gradeName;
     //上课时间（1.周末2.非周末）
     private Integer classtime;
     //授课方式（1.一对一2.一对二3.一对三4.小班课）
@@ -51,8 +55,19 @@ public class Curriculum implements Serializable {
     private Integer hits=0;
 
     private Integer like;
+
+    private Integer classnum;
+
     //get set 方法
 
+
+    public Integer getClassnum() {
+        return classnum;
+    }
+
+    public void setClassnum(Integer classnum) {
+        this.classnum = classnum;
+    }
 
     public Integer getAreaid() {
         return areaid;

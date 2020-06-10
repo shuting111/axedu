@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.rabbitmq.client.Channel;
 import com.zb.config.RabbitConfig;
 import com.zb.mapper.CurriculumMapper;
+import com.zb.mapper.GradeMapper;
 import com.zb.pojo.Curriculum;
+import com.zb.pojo.Grade;
 import com.zb.service.CurriculumService;
 import com.zb.util.RedisUtil;
 import com.zb.util.SortList;
@@ -35,6 +37,9 @@ public class CurriculumServiceImpl implements CurriculumService {
     private RedisUtil redisUtils;
     @Autowired
     private AmqpTemplate amqpTemplate;
+
+    @Autowired(required = false)
+    private GradeMapper gradeMapper;
 
     @Override
     public void CurriculmToRedis() {
@@ -93,6 +98,8 @@ public class CurriculumServiceImpl implements CurriculumService {
             try {
                 System.out.println("从数据库中查询");
                 curriculum = curriculumMapper.getCurriculumById(Long.parseLong(id + ""));
+                Grade grade = gradeMapper.getGradeById(Long.parseLong(curriculum.getGradeId()+""));
+
                 redisUtils.set(key,JSON.toJSONString(curriculum),24*60*60);
             } catch (Exception e) {
                 e.printStackTrace();
