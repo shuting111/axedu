@@ -12,6 +12,7 @@ import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -78,6 +79,41 @@ public class CurriculumServiceImpl implements CurriculumService {
         return list;
     }
 
+    @Override
+    @Cacheable(value = "cache",key = "'curr'+#id")
+    public Curriculum findCurriculumById(Integer id) {
+        System.out.println("encache中没有数据");
+        Curriculum curriculum = null;
+        String key = "curr"+id;
+        if(redisUtils.hasKey(key)){
+            System.out.println("查询redis");
+            String jsonstr = redisUtils.get(key).toString();
+            curriculum = JSON.parseObject(jsonstr,Curriculum.class);
+        }else {
+            try {
+                System.out.println("从数据库中查询");
+                curriculum = curriculumMapper.getCurriculumById(Long.parseLong(id + ""));
+                redisUtils.set(key,JSON.toJSONString(curriculum),24*60*60);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return curriculum;
+    }
+
+    @Override
+    public List<Curriculum> findIsChoiceness(Integer isChoiceness) {
+        Map<String,Object> param = new HashMap<>();
+        param.put("isChoiceness",isChoiceness);
+        List<Curriculum> list = null;
+        try {
+            list=curriculumMapper.getCurriculumListByMap(param);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
     //监听  增加点击量发起的队列
     @RabbitListener(queues = RabbitConfig.QUEUE_room)
     public void reciveHits(Map<String,Object> param, Message message, Channel channel){
@@ -97,7 +133,7 @@ public class CurriculumServiceImpl implements CurriculumService {
         }
     }
 
-    @Scheduled(cron = "21 16 00 * * ?")
+    @Scheduled(cron = "00 21 22 * * ?")
     public void guessLike(){
         String curriculum = redisUtils.get("curriculum").toString();
         List<Curriculum> list = JSON.parseArray(curriculum,Curriculum.class);
@@ -107,7 +143,7 @@ public class CurriculumServiceImpl implements CurriculumService {
             if(i<5){
                 c.setLike(1);
             }else {
-                c.setLike(0);
+                c.setLike(2);
             }
             try {
                 curriculumMapper.updateCurriculum(c);
