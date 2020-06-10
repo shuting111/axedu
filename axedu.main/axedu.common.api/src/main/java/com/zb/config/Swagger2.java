@@ -12,7 +12,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 /**
  * @author zh
  * @ClassName
- * @Description
+ * @Descriptionssssss
  */
 @Configuration
 public class Swagger2 {
