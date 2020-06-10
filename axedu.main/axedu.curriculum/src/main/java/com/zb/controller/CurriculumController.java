@@ -36,4 +36,15 @@ public class CurriculumController {
     public List<Curriculum> findLike(){
         return curriculumService.findLike();
     }
+    //精选课程
+    @GetMapping("/findIsChoiceness/{isChoiceness}")
+    public List<Curriculum> findIsChoiceness(@PathVariable("isChoiceness") Integer isChoiceness){
+        return curriculumService.findIsChoiceness(isChoiceness);
+    }
+
+    //唯一查询
+    @GetMapping("/findCurriculumById/{id}")
+    public Curriculum findCurriculumById(@PathVariable("id") Integer id){
+        return curriculumService.findCurriculumById(id);
+    }
 }

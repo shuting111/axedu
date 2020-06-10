@@ -44,7 +44,7 @@ public class Curriculum implements Serializable {
     //页面的图片
     private String pageimg;
     //上课地点
-    private Area area;
+    private Integer areaid;
     //发布时间
     private String createtime;
     //点击量
@@ -52,12 +52,14 @@ public class Curriculum implements Serializable {
 
     private Integer like;
     //get set 方法
-    public Area getArea() {
-        return area;
+
+
+    public Integer getAreaid() {
+        return areaid;
     }
 
-    public void setArea(Area area) {
-        this.area = area;
+    public void setAreaid(Integer areaid) {
+        this.areaid = areaid;
     }
 
     public Integer getLike() {

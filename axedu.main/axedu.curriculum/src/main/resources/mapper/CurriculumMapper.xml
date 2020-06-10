@@ -26,7 +26,7 @@
                 pageimg as pageimg,
                 areaid as areaid,
                 createtime as createtime,
-                like as like
+                 `like` as `like`
         from curriculum
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -57,7 +57,7 @@
                 pageimg as pageimg,
                 areaid as areaid,
                 createtime as createtime,
-                like as like
+                `like` as `like`
         from curriculum
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="id != null and id!=''">
@@ -120,8 +120,8 @@
                 <if test="createtime != null and createtime!=''">
                     and createtime=#{createtime}
                 </if>
-                <if test="like != null and like!=''">
-                    and like=#{like}
+                <if test="like != null and like!=-1">
+                    and `like`=#{like}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -193,7 +193,7 @@
                     and createtime=#{createtime}
                 </if>
                 <if test="like != null and like!=''">
-                    and like=#{like}
+                    and `like`=#{like}
                 </if>
         </trim>
     </select>
@@ -219,7 +219,7 @@
                         pageimg,
                         areaid,
                         createtime,
-                        like)
+                        `like`)
         values(
                      #{className},
                      #{subjectId},
@@ -304,7 +304,7 @@
                             createtime=#{createtime},
                         </if>
                         <if test="like != null and like!=''">
-                            like=#{like}
+                            `like`=#{like}
                         </if>
         </trim>
     </update>
