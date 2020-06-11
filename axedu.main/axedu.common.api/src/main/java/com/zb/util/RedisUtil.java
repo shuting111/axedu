@@ -1,8 +1,12 @@
 package com.zb.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.BoundListOperations;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -647,4 +651,28 @@ public class RedisUtil {
     }
 
     //=========BoundListOperations 用法 End============
+    //==========分布式锁=================
+    //上锁的方法
+    public boolean lock(final String key){
+        return redisTemplate.execute(new RedisCallback<Boolean>() {
+            @Override
+            public Boolean doInRedis(RedisConnection redisConnection) throws DataAccessException {
+                StringRedisSerializer serializer = new StringRedisSerializer();
+                byte[] keyByte = serializer.serialize(key);
+                byte[] value = serializer.serialize("lock");
+                boolean val = redisConnection.setNX(keyByte,value);
+                //setnx命令执行成功， 防止程序死锁 ， 添加锁的有效期时间
+                if(val){
+                    redisConnection.expire(keyByte,60);
+                }
+                return val;
+            }
+        });
+    }
+
+    //解锁的方法
+    public void unlock(String key){
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.delete(key);
+    }
 }
