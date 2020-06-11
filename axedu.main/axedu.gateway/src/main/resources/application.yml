@@ -6,14 +6,14 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://root:ok@localhost:8001/eureka/
+      defaultZone: http://root:ok@localhost:7001/eureka/
   instance:
     prefer-ip-address: true
 zuul:
   routes:
-    order-server:
-      path: /order/**
-      serviceId: order-server
+    order-server:  #路由的id，随意写
+      path: /order/**  #映射路径
+      serviceId: order-server #配置转发的微服务的名称
     user-server:
       path: /user/**
       serviceId: user-server
@@ -25,10 +25,10 @@ zuul:
       serviceId: curriculum-server
 
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
