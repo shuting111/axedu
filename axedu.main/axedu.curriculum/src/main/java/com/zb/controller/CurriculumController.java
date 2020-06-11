@@ -43,8 +43,8 @@ public class CurriculumController {
     }
 
     //唯一查询
-    @GetMapping("/findCurriculumById/{id}")
-    public Curriculum findCurriculumById(@PathVariable("id") Integer id){
+    @GetMapping("/findCurriculumById")
+    public Curriculum findCurriculumById(Integer id){
         return curriculumService.findCurriculumById(id);
     }
 }
