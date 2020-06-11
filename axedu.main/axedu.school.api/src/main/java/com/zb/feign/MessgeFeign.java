@@ -13,7 +13,7 @@ import java.util.Map;
 @FeignClient(value = "school-server")
 public interface MessgeFeign {
     @PostMapping(value = "/MessagePage")
-    public Page<Message> MessagePage(@RequestParam Map<String,Object> param);
+    public Page<Message> messagePage(Integer curPage,Integer pageSize);
 
     @GetMapping(value = "/findById/{id}")
     public Message findById(@PathVariable("id") Integer id);
