@@ -12,7 +12,7 @@
         from grade
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
-                and id=#{id}
+                and gradeid=#{id}
             </if>
         </trim>
     </select>
@@ -67,7 +67,7 @@
 
     <update id="updateGrade" parameterType="com.zb.pojo.Grade">
         update grade
-        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+        <trim prefix="set" suffixOverrides="," suffix="where gradeid=#{gradeid}">
                         <if test="gradeid != null and gradeid!=''">
                             gradeid=#{gradeid},
                         </if>

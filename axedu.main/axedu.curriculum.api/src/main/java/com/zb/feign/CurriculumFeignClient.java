@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "curriculum-server")
 public interface CurriculumFeignClient {
     //唯一查询接口
-    @GetMapping("/findCurriculumById/{id}")
-    public Curriculum findCurriculumById(@PathVariable("id") Integer id);
+    @GetMapping("/findCurriById/{id}")
+    public Curriculum findCurriById(@PathVariable("id") Integer id);
 }

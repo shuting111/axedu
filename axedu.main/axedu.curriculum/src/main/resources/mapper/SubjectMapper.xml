@@ -11,7 +11,7 @@
         from subject
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
-                and id=#{id}
+                and subjectId=#{id}
             </if>
         </trim>
     </select>

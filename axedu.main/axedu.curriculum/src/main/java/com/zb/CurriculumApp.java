@@ -1,10 +1,12 @@
 package com.zb;
 
+import com.zb.tools.CanalTools;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
@@ -20,6 +22,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableCaching //开启缓存
 public class CurriculumApp {
     public static void main(String[] args) {
-        SpringApplication.run(CurriculumApp.class);
+        ConfigurableApplicationContext context = SpringApplication.run(CurriculumApp.class);
+        CanalTools canalTools = context.getBean(CanalTools.class);
+        canalTools.execution();
     }
 }

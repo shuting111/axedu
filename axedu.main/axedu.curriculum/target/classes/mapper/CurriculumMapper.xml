@@ -26,6 +26,7 @@
                 pageimg as pageimg,
                 areaid as areaid,
                 createtime as createtime,
+                classnum as classnum,
                  `like` as `like`
         from curriculum
         <trim prefix="where" prefixOverrides="and | or">
@@ -57,6 +58,7 @@
                 pageimg as pageimg,
                 areaid as areaid,
                 createtime as createtime,
+                 classnum as classnum,
                 `like` as `like`
         from curriculum
         <trim prefix="where" prefixOverrides="and | or">
@@ -122,6 +124,9 @@
                 </if>
                 <if test="like != null and like!=-1">
                     and `like`=#{like}
+                </if>
+                <if test="classnum != null and classnum!=-1">
+                    and `classnum`=#{classnum}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -195,6 +200,9 @@
                 <if test="like != null and like!=''">
                     and `like`=#{like}
                 </if>
+                <if test="classnum != null and classnum!=-1">
+                    and `classnum`=#{classnum}
+                </if>
         </trim>
     </select>
 
@@ -219,6 +227,7 @@
                         pageimg,
                         areaid,
                         createtime,
+                        classnum,
                         `like`)
         values(
                      #{className},
@@ -240,6 +249,7 @@
                      #{pageimg},
                      #{areaid},
                      #{createtime},
+                     #{classnum},
                     #{like})
     </insert>
 
@@ -305,6 +315,9 @@
                         </if>
                         <if test="like != null and like!=''">
                             `like`=#{like}
+                        </if>
+                        <if test="classnum != null and classnum!=''">
+                            `classnum`=#{classnum}
                         </if>
         </trim>
     </update>

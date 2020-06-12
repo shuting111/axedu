@@ -11,10 +11,32 @@
 
     <artifactId>axedu.curriculum.api</artifactId>
 
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
+        <!--es的依赖-->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>6.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>6.2.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>top.javatool</groupId>
+            <artifactId>canal-client</artifactId>
+            <version>1.2.1-RELEASE</version>
         </dependency>
         <dependency>
             <artifactId>axedu.common.api</artifactId>
@@ -26,6 +48,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
+
+
     </dependencies>
 
 

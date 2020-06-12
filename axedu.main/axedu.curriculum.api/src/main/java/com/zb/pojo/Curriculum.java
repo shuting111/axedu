@@ -1,5 +1,5 @@
 package com.zb.pojo;
-import javafx.scene.control.IndexRange;
+
 
 import java.io.Serializable;
 
@@ -53,13 +53,39 @@ public class Curriculum implements Serializable {
     private String createtime;
     //点击量
     private Integer hits=0;
-
+    //猜你喜欢
     private Integer like;
-
+    //课次
     private Integer classnum;
+    //课程的评价
+    private Double score;
 
     //get set 方法
 
+
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
+    }
+
+    public String getSubName() {
+        return subName;
+    }
+
+    public void setSubName(String subName) {
+        this.subName = subName;
+    }
+
+    public String getGradeName() {
+        return gradeName;
+    }
+
+    public void setGradeName(String gradeName) {
+        this.gradeName = gradeName;
+    }
 
     public Integer getClassnum() {
         return classnum;
