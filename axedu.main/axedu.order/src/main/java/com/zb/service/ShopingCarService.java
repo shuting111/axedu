@@ -2,6 +2,8 @@ package com.zb.service;
 
 import com.zb.pojo.Cart;
 
+import java.util.Map;
+
 public interface ShopingCarService {
     /**
      * 添加购物车
@@ -34,4 +36,12 @@ public interface ShopingCarService {
      * @return
      */
     public Cart getCartAllItem(Integer uid);
+
+    /**
+     * 获取购物车中某商品购买个数
+     * @param uid
+     * @param subjectId
+     * @return
+     */
+    public int getValue(Integer uid, Integer subjectId);
 }

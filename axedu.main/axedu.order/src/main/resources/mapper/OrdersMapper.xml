@@ -174,13 +174,13 @@
                      #{orderNo},
                      #{tradeNo},
                      #{orderName},
-                     #{orderStatus},
+                     0,
                      #{payAmount},
                      #{paytype},
-                     #{modifyTime},
+                     now(),
                      #{noticePhone},
                      #{noticeEmail},
-                     #{startTime},
+                     now(),
                      #{endTime},
                     #{number})
     </insert>

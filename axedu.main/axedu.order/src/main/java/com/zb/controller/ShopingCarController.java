@@ -37,4 +37,9 @@ public class ShopingCarController {
         }
         return cart;
     }
+
+    @PostMapping("/getValue")
+    public int getValue(Integer uid, Integer subjectId){
+        return shopingCarService.getValue(uid, subjectId);
+    }
 }

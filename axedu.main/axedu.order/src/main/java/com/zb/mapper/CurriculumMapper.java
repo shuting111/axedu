@@ -3,6 +3,7 @@ package com.zb.mapper;
 import com.zb.pojo.Curriculum;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import java.util.Map;
@@ -25,5 +26,13 @@ public interface CurriculumMapper {
 	 * @return
      */
 	public List<Curriculum>findIsDiscount();
+
+	/**
+	 * 根据id修改课程名额
+	 * @param id
+	 * @param banrong
+	 * @return
+	 */
+	public int updateBanrong(@Param("id") Integer id, @Param("banrong") Integer banrong);
 
 }
