@@ -1,6 +1,8 @@
 package com.zb.service;
 
+import com.zb.form.CurriArgs;
 import com.zb.pojo.Curriculum;
+import com.zb.util.PageUtil;
 
 import java.util.List;
 
@@ -21,6 +23,10 @@ public interface CurriculumService {
     public Curriculum findCurriculumById(Integer id);
     //查询精品课程
     public List<Curriculum> findIsChoiceness(Integer isChoiceness);
+    //查询全部课程
+    public List<Curriculum> findCurricilumAll();
+    //es查询
+    public PageUtil<Curriculum> findKeyWord(CurriArgs c)throws Exception;
 
 
 
