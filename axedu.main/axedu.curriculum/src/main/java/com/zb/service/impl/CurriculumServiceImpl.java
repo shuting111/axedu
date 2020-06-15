@@ -7,6 +7,7 @@ import com.zb.form.CurriArgs;
 import com.zb.mapper.CurriculumMapper;
 import com.zb.mapper.GradeMapper;
 import com.zb.mapper.SubjectMapper;
+import com.zb.pojo.Advert;
 import com.zb.pojo.Curriculum;
 import com.zb.pojo.Grade;
 import com.zb.pojo.Subject;
@@ -35,8 +36,11 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -64,6 +68,10 @@ public class CurriculumServiceImpl implements CurriculumService {
     private GradeMapper gradeMapper;
     @Autowired(required = false)
     private SubjectMapper subjectMapper;
+    @Autowired
+    private RestTemplate restTemplate;
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
     @Override
     public void CurriculmToRedis() {
@@ -178,7 +186,7 @@ public class CurriculumServiceImpl implements CurriculumService {
                     .operator(Operator.OR).field("className", 10));
         }
         if (c.getGradeId()!=null&&c.getGradeId()!=-1){
-            boolQueryBuilder.filter((QueryBuilders.termQuery("gradeid",c.getGradeId())));
+            boolQueryBuilder.filter((QueryBuilders.termQuery("gradeId",c.getGradeId())));
         }
         if (c.getSubjectId()!=null&&c.getSubjectId()!=-1){
             boolQueryBuilder.filter((QueryBuilders.termQuery("subjectId",c.getSubjectId())));
@@ -209,7 +217,10 @@ public class CurriculumServiceImpl implements CurriculumService {
         highlightBuilder.preTags("<div style='color:red;'>");
         highlightBuilder.postTags("</div>");
         //添加高亮字段
-        highlightBuilder.fields().add(new HighlightBuilder.Field("presentPrice"));
+        highlightBuilder.fields().add(new HighlightBuilder.Field("className"));
+        highlightBuilder.fields().add(new HighlightBuilder.Field("subName"));
+        highlightBuilder.fields().add(new HighlightBuilder.Field("gradeName"));
+
         //将highlightBuilder对象添加到查询对象中
         searchSourceBuilder.highlighter(highlightBuilder);
         //绑定查询构建对象
@@ -230,23 +241,23 @@ public class CurriculumServiceImpl implements CurriculumService {
                 //获取普通数据
                 Integer id = Integer.parseInt(hit.getId());
                 Map<String, Object> sourceAsMap = hit.getSourceAsMap();
-                String className = sourceAsMap.get("className").toString();
-                Integer classtime =sourceAsMap.get("classtime")==null?null:(Integer) sourceAsMap.get("classtime");
-                Integer subjectId =sourceAsMap.get("subjectId")==null?null:(Integer) sourceAsMap.get("subjectId");
-                Integer teachingMethod =sourceAsMap.get("teachingMethod")==null?null:(Integer) sourceAsMap.get("teachingMethod");
-                Integer areaid =sourceAsMap.get("areaid")==null?null:(Integer) sourceAsMap.get("areaid");
-                Integer gradeId =sourceAsMap.get("gradeId")==null?null:(Integer) sourceAsMap.get("gradeId");
-                String pageimg = sourceAsMap.get("pageimg").toString();
-                String createtime = sourceAsMap.get("createtime").toString();
-                Double presentPrice =sourceAsMap.get("presentPrice")==null?null:(Double)sourceAsMap.get("presentPrice");
-                Double score =sourceAsMap.get("score")==null?null:(Double)sourceAsMap.get("score");
-                Integer hits =sourceAsMap.get("hits")==null?null:(Integer) sourceAsMap.get("hits");
+                String className = sourceAsMap.get("className")==null?null:sourceAsMap.get("className").toString();
+                Integer classtime =sourceAsMap.get("classtime")==null?null:Integer.parseInt(sourceAsMap.get("classtime").toString());
+                Integer subjectId =sourceAsMap.get("subjectId")==null?null:Integer.parseInt(sourceAsMap.get("subjectId").toString());
+                Integer teachingMethod =sourceAsMap.get("teachingMethod")==null?null:Integer.parseInt(sourceAsMap.get("teachingMethod").toString());
+                Integer areaid =sourceAsMap.get("areaid")==null?null:Integer.parseInt(sourceAsMap.get("areaid").toString());
+                Integer gradeId =sourceAsMap.get("gradeId")==null?null:Integer.parseInt(sourceAsMap.get("gradeId").toString());
+                String pageimg = sourceAsMap.get("pageimg")==null?null:sourceAsMap.get("pageimg").toString();
+                String createtime = sourceAsMap.get("createtime")==null?null:sourceAsMap.get("createtime").toString();
+                Double presentPrice =sourceAsMap.get("presentPrice")==null?null:Double.parseDouble(sourceAsMap.get("presentPrice").toString());
+                Double score =sourceAsMap.get("score")==null?null:Double.parseDouble(sourceAsMap.get("score").toString());
+                Integer hits =sourceAsMap.get("hits")==null?null:Integer.parseInt(sourceAsMap.get("hits").toString());
 
 
                 //获取高亮数据
                 Map<String, HighlightField> highlightFields = hit.getHighlightFields();
                 if (highlightFields != null) {
-                    HighlightField nameField = highlightFields.get("presentPrice");
+                    HighlightField nameField = highlightFields.get("className");
                     //验证高亮部分中是否包含该属性
                     if (nameField != null) {
                         Text[] nameText = nameField.getFragments();
@@ -255,7 +266,29 @@ public class CurriculumServiceImpl implements CurriculumService {
                             nameSbf.append(text);
                         }
                         //覆盖掉原始的数据
-                        presentPrice = Double.parseDouble(nameSbf.toString());
+                        className = nameSbf.toString();
+                    }
+                    HighlightField subNameField = highlightFields.get("subName");
+                    //验证高亮部分中是否包含该属性
+                    if (subNameField != null) {
+                        Text[] subNameText = subNameField.getFragments();
+                        StringBuffer subNameSbf = new StringBuffer();
+                        for (Text text : subNameText) {
+                            subNameSbf.append(text);
+                        }
+                        //覆盖掉原始的数据
+                        className = subNameSbf.toString();
+                    }
+                    HighlightField gradeNameField = highlightFields.get("className");
+                    //验证高亮部分中是否包含该属性
+                    if (gradeNameField != null) {
+                        Text[] gradeNameText = gradeNameField.getFragments();
+                        StringBuffer gradeNameSbf = new StringBuffer();
+                        for (Text text : gradeNameText) {
+                            gradeNameSbf.append(text);
+                        }
+                        //覆盖掉原始的数据
+                        className = gradeNameSbf.toString();
                     }
                 }
                 //封装到对象里
@@ -285,6 +318,14 @@ public class CurriculumServiceImpl implements CurriculumService {
         return page;
     }
 
+    @Override
+    public List<Advert> getAdvertUrl(Integer id) {
+        List<ServiceInstance> instances = discoveryClient.getInstances("curriculum-server");
+        ServiceInstance serviceInstance = instances.get(0);
+        String url = "http://localhost:9000/axedu?id=" + id;
+        List<Advert> list = restTemplate.getForObject(url, List.class);
+        return list;
+    }
 
 
     //监听  增加点击量发起的队列

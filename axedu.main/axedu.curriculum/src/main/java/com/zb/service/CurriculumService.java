@@ -1,6 +1,7 @@
 package com.zb.service;
 
 import com.zb.form.CurriArgs;
+import com.zb.pojo.Advert;
 import com.zb.pojo.Curriculum;
 import com.zb.util.PageUtil;
 
@@ -27,6 +28,8 @@ public interface CurriculumService {
     public List<Curriculum> findCurricilumAll();
     //es查询
     public PageUtil<Curriculum> findKeyWord(CurriArgs c)throws Exception;
+    //轮播图的图片
+    public List<Advert> getAdvertUrl(Integer id);
 
 
 
