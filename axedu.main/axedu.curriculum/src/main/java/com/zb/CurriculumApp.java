@@ -7,7 +7,9 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author 王淑婷
@@ -25,5 +27,10 @@ public class CurriculumApp {
         ConfigurableApplicationContext context = SpringApplication.run(CurriculumApp.class);
         CanalTools canalTools = context.getBean(CanalTools.class);
         canalTools.execution();
+    }
+
+    @Bean
+    public RestTemplate createRestTemplate(){
+        return new RestTemplate();
     }
 }

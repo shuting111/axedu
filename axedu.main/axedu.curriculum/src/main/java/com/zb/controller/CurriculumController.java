@@ -1,6 +1,7 @@
 package com.zb.controller;
 
 import com.zb.form.CurriArgs;
+import com.zb.pojo.Advert;
 import com.zb.pojo.Curriculum;
 import com.zb.service.CurriculumService;
 import com.zb.util.PageUtil;
@@ -187,6 +188,11 @@ public class CurriculumController {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @GetMapping("/getAdvertUrl")
+    public List<Advert> getAdvertUrl(Integer id){
+        return curriculumService.getAdvertUrl(id);
     }
 
 }
