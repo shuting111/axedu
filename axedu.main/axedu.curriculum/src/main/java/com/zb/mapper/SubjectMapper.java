@@ -1,6 +1,7 @@
 package com.zb.mapper;
 
 import com.zb.pojo.Subject;
+import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -19,6 +20,9 @@ public interface SubjectMapper {
 	public Integer insertSubject(Subject subject)throws Exception;
 
 	public Integer updateSubject(Subject subject)throws Exception;
+
+	//根据年级id查询对应的科目
+	public List<Subject> findSubjectByGradeId(@Param("gid") Integer gid);
 
 
 

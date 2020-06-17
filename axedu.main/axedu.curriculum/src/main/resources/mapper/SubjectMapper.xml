@@ -45,6 +45,11 @@
                 </if>
         </trim>
     </select>
+    <select id="findSubjectByGradeId" resultType="com.zb.pojo.Subject">
+        SELECT s.`subjectId`,s.`subjectName` FROM `subject` s,`grade_subject` l
+        WHERE s.`subjectId` = l.`subjectid`
+        AND l.`gradeid` = #{gid}
+    </select>
 
     <insert id="insertSubject" parameterType="com.zb.pojo.Subject">
         insert into subject(

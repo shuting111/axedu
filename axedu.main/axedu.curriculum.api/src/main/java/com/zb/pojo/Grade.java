@@ -1,5 +1,6 @@
 package com.zb.pojo;
 import java.io.Serializable;
+import java.util.List;
 
 /***
 *   
@@ -11,7 +12,19 @@ public class Grade implements Serializable {
     private String gradename;
     //级别（1.幼儿2.小学3.初中4.高中）
     private Integer level;
+    //年级对应的科目集合
+    private List<Subject> subjects;
     //get set 方法
+
+
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+    }
+
     public void setGradeid (Integer  gradeid){
         this.gradeid=gradeid;
     }

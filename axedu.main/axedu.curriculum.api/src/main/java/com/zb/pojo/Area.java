@@ -1,5 +1,6 @@
 package com.zb.pojo;
 import java.io.Serializable;
+import java.util.List;
 
 /***
 *   区域字典表
@@ -13,27 +14,26 @@ public class Area implements Serializable {
     private String areaNo;
     //父级区域
     private Long parent;
-    //0:未激活 1:已激活
-    private Integer isActivated;
-    //是否是商圈(0:不是 1:是)
-    private Integer isTradingArea;
-    //(0:不是 1：是)
-    private Integer isHot;
     //区域级别(0:国家级 1:省级 2:市级 3:县/区)
     private Integer level;
     //1:国内 2：国外
     private Integer isChina;
-    //
-    private String pinyin;
-    //
-    private String creationDate;
-    //
-    private Long createdBy;
-    //
-    private String modifyDate;
-    //
-    private Long modifiedBy;
+    //该级别下的子区域
+    private List<Area> child;
+
+
+
     //get set 方法
+
+
+    public List<Area> getChild() {
+        return child;
+    }
+
+    public void setChild(List<Area> child) {
+        this.child = child;
+    }
+
     public void setId (Long  id){
         this.id=id;
     }
@@ -58,24 +58,6 @@ public class Area implements Serializable {
     public  Long getParent(){
         return this.parent;
     }
-    public void setIsActivated (Integer  isActivated){
-        this.isActivated=isActivated;
-    }
-    public  Integer getIsActivated(){
-        return this.isActivated;
-    }
-    public void setIsTradingArea (Integer  isTradingArea){
-        this.isTradingArea=isTradingArea;
-    }
-    public  Integer getIsTradingArea(){
-        return this.isTradingArea;
-    }
-    public void setIsHot (Integer  isHot){
-        this.isHot=isHot;
-    }
-    public  Integer getIsHot(){
-        return this.isHot;
-    }
     public void setLevel (Integer  level){
         this.level=level;
     }
@@ -88,34 +70,5 @@ public class Area implements Serializable {
     public  Integer getIsChina(){
         return this.isChina;
     }
-    public void setPinyin (String  pinyin){
-        this.pinyin=pinyin;
-    }
-    public  String getPinyin(){
-        return this.pinyin;
-    }
-    public void setCreationDate (String  creationDate){
-        this.creationDate=creationDate;
-    }
-    public  String getCreationDate(){
-        return this.creationDate;
-    }
-    public void setCreatedBy (Long  createdBy){
-        this.createdBy=createdBy;
-    }
-    public  Long getCreatedBy(){
-        return this.createdBy;
-    }
-    public void setModifyDate (String  modifyDate){
-        this.modifyDate=modifyDate;
-    }
-    public  String getModifyDate(){
-        return this.modifyDate;
-    }
-    public void setModifiedBy (Long  modifiedBy){
-        this.modifiedBy=modifiedBy;
-    }
-    public  Long getModifiedBy(){
-        return this.modifiedBy;
-    }
+
 }

@@ -28,8 +28,9 @@ public interface CurriculumService {
     public List<Curriculum> findCurricilumAll();
     //es查询
     public PageUtil<Curriculum> findKeyWord(CurriArgs c)throws Exception;
-    //轮播图的图片
-    public List<Advert> getAdvertUrl(Integer id);
+
+    //添加课程
+    public int insertCurriculum(Curriculum curriculum);
 
 
 

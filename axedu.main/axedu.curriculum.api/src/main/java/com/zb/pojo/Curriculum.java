@@ -1,6 +1,12 @@
 package com.zb.pojo;
 
 
+
+
+
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 /***
@@ -10,6 +16,7 @@ public class Curriculum implements Serializable {
     //课程id
     private Integer id;
     //课程名称
+    @NotNull(message = "课程名字不能为空")
     private String className;
     //科目id
     private Integer subjectId;
