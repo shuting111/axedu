@@ -20,9 +20,13 @@ public interface OrdertempMapper {
 
 	public Integer updateOrdertemp(Ordertemp ordertemp)throws Exception;
 
-	public Integer deleteOrdertempById(@Param(value = "id") Long id)throws Exception;
-
-	public Integer batchDeleteOrdertemp(Map<String, List<String>> params);
+	/**
+	 * 查询临时表中某个商品信息
+	 * @param id
+	 * @param uid
+	 * @return
+	 */
+	public Ordertemp findOnlyOne(@Param("id") Integer id,@Param("uid") Integer uid);
 
 	/**
      * 临时库存表中该商品记录数

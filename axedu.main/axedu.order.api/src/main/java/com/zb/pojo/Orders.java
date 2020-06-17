@@ -24,15 +24,15 @@ public class Orders implements Serializable {
     //支付方式：1：微信；2：支付宝；3：现金
     private Integer paytype;
     //支付完成时间
-    private Date modifyTime;
+    private String modifyTime;
     //联系手机号
     private String noticePhone;
     //联系邮箱
     private String noticeEmail;
     //开课时间
-    private Date startTime;
+    private String startTime;
     //节课时间
-    private Date endTime;
+    private String endTime;
     //报名人数
     private Integer number;
     //get set 方法
@@ -90,12 +90,7 @@ public class Orders implements Serializable {
     public  Integer getPaytype(){
         return this.paytype;
     }
-    public void setModifyTime (Date  modifyTime){
-        this.modifyTime=modifyTime;
-    }
-    public  Date getModifyTime(){
-        return this.modifyTime;
-    }
+
     public void setNoticePhone (String  noticePhone){
         this.noticePhone=noticePhone;
     }
@@ -108,18 +103,31 @@ public class Orders implements Serializable {
     public  String getNoticeEmail(){
         return this.noticeEmail;
     }
-    public void setStartTime (Date  startTime){
-        this.startTime=startTime;
+
+    public String getModifyTime() {
+        return modifyTime;
     }
-    public  Date getStartTime(){
-        return this.startTime;
+
+    public void setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
     }
-    public void setEndTime (Date  endTime){
-        this.endTime=endTime;
+
+    public String getStartTime() {
+        return startTime;
     }
-    public  Date getEndTime(){
-        return this.endTime;
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
     public void setNumber (Integer  number){
         this.number=number;
     }

@@ -4,6 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.OrdersMapper">
 
+    <select id="findByOrderNo" resultType="com.zb.pojo.Orders">
+        SELECT * FROM orders WHERE orderNo =#{orderNo}
+    </select>
+
     <select id="getOrdersById" resultType="com.zb.pojo.Orders">
         select
                 oid as oid,
@@ -24,7 +28,7 @@
         from orders
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
-                and id=#{id}
+                and oid=#{id}
             </if>
         </trim>
     </select>
@@ -187,7 +191,7 @@
 
     <update id="updateOrders" parameterType="com.zb.pojo.Orders">
         update orders
-        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+        <trim prefix="set" suffixOverrides="," suffix="where oid=#{oid}">
                         <if test="oid != null and oid!=''">
                             oid=#{oid},
                         </if>

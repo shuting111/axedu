@@ -7,6 +7,10 @@
     <select id="getTempCount" resultType="int">
         select count(*) from `ordertemp` where goodsId=#{id}
     </select>
+
+    <select id="findOnlyOne" resultType="com.zb.pojo.Ordertemp">
+        select * from `ordertemp` where goodsId=#{id} and userId=#{uid}
+    </select>
     <select id="getOrdertempById" resultType="com.zb.pojo.Ordertemp">
         select
                 tempId as tempId,
@@ -92,7 +96,7 @@
         values(
                      #{tempId},
                      #{goodsId},
-                     #{recordTime},
+                     now(),
                      #{store},
                      #{status},
                     #{userId})
@@ -100,7 +104,7 @@
 
     <update id="updateOrdertemp" parameterType="com.zb.pojo.Ordertemp">
         update ordertemp
-        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+        <trim prefix="set" suffixOverrides="," suffix="where tempId=#{tempId}">
                         <if test="tempId != null and tempId!=''">
                             tempId=#{tempId},
                         </if>

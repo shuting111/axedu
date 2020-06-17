@@ -19,4 +19,9 @@ public class OrderTempController {
         return orderTempService.lockRoomStock(id, uid);
     }
 
+    @GetMapping("/qgWhile/{subjectId}")
+    public String qgWhile(@PathVariable("subjectId") Integer subjectId){
+        return orderTempService.qgWhile(subjectId);
+    }
+
 }

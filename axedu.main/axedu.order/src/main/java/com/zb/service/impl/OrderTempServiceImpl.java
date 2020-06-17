@@ -13,6 +13,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class OrderTempServiceImpl implements OrderTempService {
@@ -39,6 +40,21 @@ public class OrderTempServiceImpl implements OrderTempService {
             curriculum.setBanrong(curriculum.getBanrong()-tempCount);
             redisUtil.set("curriculum:"+curriculum.getId(),JSON.toJSONString(curriculum),60*60*24);
         }
+    }
+
+    @Override
+    public Ordertemp findOnlyOne(Integer id, Integer uid) {
+        return ordertempMapper.findOnlyOne(id,uid);
+    }
+
+    @Override
+    public Integer updateOrdertemp(Ordertemp ordertemp) {
+        try {
+            return ordertempMapper.updateOrdertemp(ordertemp);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override
@@ -76,5 +92,20 @@ public class OrderTempServiceImpl implements OrderTempService {
             e.printStackTrace();
         }
         return 0;
+    }
+
+    @Override
+    public String qgWhile(Integer subjectId) {
+        int i = this.checkStore(subjectId);
+        String qgkey = "qg:"+subjectId+":"+1;
+        if(redisUtil.hasKey(qgkey)){
+            return "success";
+        }else{
+            if(i<=0){
+                return "none";
+            }else{
+                return "input";
+            }
+        }
     }
 }

@@ -10,7 +10,7 @@ public class Ordertemp implements Serializable {
     //商品id
     private Integer goodsId;
     //记录时间
-    private Date recordTime;
+    private String recordTime;
     //剩余名额
     private Integer store;
     //状态：0：未购买；1:已购买；2：购买失败
@@ -30,12 +30,15 @@ public class Ordertemp implements Serializable {
     public  Integer getGoodsId(){
         return this.goodsId;
     }
-    public void setRecordTime (Date  recordTime){
-        this.recordTime=recordTime;
+
+    public String getRecordTime() {
+        return recordTime;
     }
-    public  Date getRecordTime(){
-        return this.recordTime;
+
+    public void setRecordTime(String recordTime) {
+        this.recordTime = recordTime;
     }
+
     public void setStore (Integer  store){
         this.store=store;
     }

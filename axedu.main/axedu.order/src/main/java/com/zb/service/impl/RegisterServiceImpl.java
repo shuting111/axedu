@@ -17,12 +17,12 @@ public class RegisterServiceImpl implements RegisterService {
     private RedisUtil redisUtil;
     @Override
     public Register getRegisterByToken(String token) {
-        if(redisUtil.hasKey(token)){
-            String string = redisUtil.get(token).toString();
-            Register register = JSON.parseObject(string, Register.class);
-            return register;
-        }else{
-            return null;
-        }
+        Object string = redisUtil.get(token);
+        System.out.println("--------------"+string);
+//        if(string!=null){
+//            Register register = JSON.parseObject(string, Register.class);
+//            return register;
+//        }
+        return null;
     }
 }
