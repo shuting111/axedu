@@ -7,7 +7,7 @@ import com.zb.form.CurriArgs;
 import com.zb.mapper.CurriculumMapper;
 import com.zb.mapper.GradeMapper;
 import com.zb.mapper.SubjectMapper;
-import com.zb.pojo.Advert;
+
 import com.zb.pojo.Curriculum;
 import com.zb.pojo.Grade;
 import com.zb.pojo.Subject;
@@ -68,10 +68,8 @@ public class CurriculumServiceImpl implements CurriculumService {
     private GradeMapper gradeMapper;
     @Autowired(required = false)
     private SubjectMapper subjectMapper;
-    @Autowired
-    private RestTemplate restTemplate;
-    @Autowired
-    private DiscoveryClient discoveryClient;
+
+
 
     @Override
     public void CurriculmToRedis() {
@@ -319,12 +317,13 @@ public class CurriculumServiceImpl implements CurriculumService {
     }
 
     @Override
-    public List<Advert> getAdvertUrl(Integer id) {
-        List<ServiceInstance> instances = discoveryClient.getInstances("curriculum-server");
-        ServiceInstance serviceInstance = instances.get(0);
-        String url = "http://localhost:9000/axedu?id=" + id;
-        List<Advert> list = restTemplate.getForObject(url, List.class);
-        return list;
+    public int insertCurriculum(Curriculum curriculum) {
+        try {
+            return curriculumMapper.insertCurriculum(curriculum);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
 

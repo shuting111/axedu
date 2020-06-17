@@ -11,6 +11,7 @@ import java.util.List;
  * @Version V1.0
  */
 public interface GradeService {
-
+    //根据父id查询年级的集合
+    public List<Grade> findListByParentId(Integer pid);
 
 }

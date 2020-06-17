@@ -17,10 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class MaterialController {
     @Autowired
     private MaterialService materialService;
+    //根据年级id和科目id分页查询资料
     @GetMapping("/findMaterialPage")
     public PageUtil<Material> findMaterialPage(Integer index, Integer size, Integer gradeid, Integer subjectid){
         return materialService.findMaterialPage(index,size,subjectid,gradeid);
     }
+    //唯一查询资料信息
     @GetMapping("/findMaterialById")
     public Material findMaterialById(Long id){
         return materialService.findMaterialById(id);

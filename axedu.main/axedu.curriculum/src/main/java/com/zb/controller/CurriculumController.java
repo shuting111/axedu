@@ -17,6 +17,7 @@ import org.elasticsearch.common.xcontent.XContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -180,6 +181,7 @@ public class CurriculumController {
 
     }
 
+    //es关键字查询  CurriArgs是封装的参数类
     @PostMapping("/findKeyWord")
     public PageUtil<Curriculum> findKeyWord(CurriArgs c) {
         try {
@@ -190,9 +192,12 @@ public class CurriculumController {
         return null;
     }
 
-    @GetMapping("/getAdvertUrl")
-    public List<Advert> getAdvertUrl(Integer id){
-        return curriculumService.getAdvertUrl(id);
+
+
+    //向后台管理模块提供的添加课程的接口
+    @PostMapping("/insertCurriculum")
+    public int insertCurriculum(@Valid Curriculum curriculum){
+        return curriculumService.insertCurriculum(curriculum);
     }
 
 }
