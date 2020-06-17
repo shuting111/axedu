@@ -6,9 +6,9 @@ import java.util.Date;
 */
 public class Task implements Serializable {
     //任务表id
-    private Integer taskId;
+    private String taskId;
     //创建时间
-    private Date createTime;
+    private String createTime;
     //交换机名称
     private String myExchange;
     //routingkey
@@ -20,18 +20,24 @@ public class Task implements Serializable {
     //任务状态
     private Integer status;
     //get set 方法
-    public void setTaskId (Integer  taskId){
-        this.taskId=taskId;
+
+
+    public String getTaskId() {
+        return taskId;
     }
-    public  Integer getTaskId(){
-        return this.taskId;
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
-    public void setCreateTime (Date  createTime){
-        this.createTime=createTime;
+
+    public String getCreateTime() {
+        return createTime;
     }
-    public  Date getCreateTime(){
-        return this.createTime;
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
+
     public void setMyExchange (String  myExchange){
         this.myExchange=myExchange;
     }
@@ -62,4 +68,5 @@ public class Task implements Serializable {
     public  Integer getStatus(){
         return this.status;
     }
+
 }

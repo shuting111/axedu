@@ -20,8 +20,8 @@ public interface TaskMapper {
 
 	public Integer updateTask(Task task)throws Exception;
 
-	public Integer deleteTaskById(@Param(value = "id") Long id)throws Exception;
+	public List<Task> findOneMinute();
 
-	public Integer batchDeleteTask(Map<String, List<String>> params);
+	public Integer updateVersion(Task task);
 
 }

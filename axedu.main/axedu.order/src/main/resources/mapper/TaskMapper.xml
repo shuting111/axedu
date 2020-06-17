@@ -16,10 +16,19 @@
         from task
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
-                and id=#{id}
+                and taskId=#{id}
             </if>
         </trim>
     </select>
+
+    <select id="findOneMinute" resultType="com.zb.pojo.Task">
+        select * from task WHERE
+        TIMESTAMPDIFF(MINUTE,createTime,NOW())>1
+    </select>
+
+    <update id="updateVersion" parameterType="com.zb.pojo.Task">
+        update task set version = version + 1 where version = #{version} and taskId = #{taskId}
+    </update>
 
     <select id="getTaskListByMap" resultType="com.zb.pojo.Task" parameterType="java.util.Map">
         select
@@ -97,22 +106,22 @@
                         status)
         values(
                      #{taskId},
-                     #{createTime},
+                     now(),
                      #{myExchange},
                      #{myRoutingKey},
                      #{requestBody},
                      #{version},
-                    #{status})
+                     #{status})
     </insert>
 
     <update id="updateTask" parameterType="com.zb.pojo.Task">
         update task
-        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+        <trim prefix="set" suffixOverrides="," suffix="where taskId=#{taskId}">
                         <if test="taskId != null and taskId!=''">
                             taskId=#{taskId},
                         </if>
                         <if test="createTime != null and createTime!=''">
-                            createTime=#{createTime},
+                            createTime=now(),
                         </if>
                         <if test="myExchange != null and myExchange!=''">
                             myExchange=#{myExchange},
@@ -123,7 +132,7 @@
                         <if test="requestBody != null and requestBody!=''">
                             requestBody=#{requestBody},
                         </if>
-                        <if test="version != null and version!=''">
+                        <if test="version != null and version!=-1">
                             version=#{version},
                         </if>
                         <if test="status != null and status!=''">

@@ -20,8 +20,6 @@ public interface OrdersMapper {
 
 	public Integer updateOrders(Orders orders)throws Exception;
 
-	public Integer deleteOrdersById(@Param(value = "id") Long id)throws Exception;
-
-	public Integer batchDeleteOrders(Map<String, List<String>> params);
+	public Orders findByOrderNo(@Param("orderNo")String orderNo);
 
 }
