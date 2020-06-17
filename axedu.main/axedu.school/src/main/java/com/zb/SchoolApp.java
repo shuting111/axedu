@@ -15,6 +15,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableFeignClients
 public class SchoolApp {
+    //jjjjjjjjjkkkksss
     public static void main(String[] args) {
         SpringApplication.run(SchoolApp.class,args);
     }
