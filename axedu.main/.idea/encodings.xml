@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.common.api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.common.api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.curriculum" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.curriculum.api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.curriculum.api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.curriculum/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.order.api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.order.api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.purchaserecord" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.purchaserecord.api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.school" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.school.api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.school.api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.school/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/axedu.user.api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.user.api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/axedu.user/src/main/java" charset="UTF-8" />
   </component>

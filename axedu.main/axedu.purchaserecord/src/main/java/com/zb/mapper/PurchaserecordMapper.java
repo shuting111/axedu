@@ -20,8 +20,4 @@ public interface PurchaserecordMapper {
 
 	public Integer updatePurchaserecord(Purchaserecord purchaserecord)throws Exception;
 
-	public Integer deletePurchaserecordById(@Param(value = "id") Long id)throws Exception;
-
-	public Integer batchDeletePurchaserecord(Map<String, List<String>> params);
-
 }

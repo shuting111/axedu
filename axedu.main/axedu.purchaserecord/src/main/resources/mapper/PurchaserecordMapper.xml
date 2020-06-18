@@ -17,7 +17,7 @@
         from purchaserecord
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
-                and id=#{id}
+                and goodsId=#{id}
             </if>
         </trim>
     </select>

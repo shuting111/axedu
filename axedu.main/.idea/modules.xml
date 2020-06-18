@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/axedu.main.iml" filepath="$PROJECT_DIR$/.idea/axedu.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/axedu.order/axedu.order.iml" filepath="$PROJECT_DIR$/axedu.order/axedu.order.iml" />
       <module fileurl="file://$PROJECT_DIR$/axedu.order.api/axedu.order.api.iml" filepath="$PROJECT_DIR$/axedu.order.api/axedu.order.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.purchaserecord/axedu.purchaserecord.iml" filepath="$PROJECT_DIR$/axedu.purchaserecord/axedu.purchaserecord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/axedu.purchaserecord.api/axedu.purchaserecord.api.iml" filepath="$PROJECT_DIR$/axedu.purchaserecord.api/axedu.purchaserecord.api.iml" />
       <module fileurl="file://$PROJECT_DIR$/axedu.school/axedu.school.iml" filepath="$PROJECT_DIR$/axedu.school/axedu.school.iml" />
       <module fileurl="file://$PROJECT_DIR$/axedu.school.api/axedu.school.api.iml" filepath="$PROJECT_DIR$/axedu.school.api/axedu.school.api.iml" />
       <module fileurl="file://$PROJECT_DIR$/axedu.user/axedu.user.iml" filepath="$PROJECT_DIR$/axedu.user/axedu.user.iml" />

@@ -1,6 +1,7 @@
 package com.zb.pojo;
 import java.io.Serializable;
 import java.util.Date;
+
 /***
 *   
 */
@@ -16,9 +17,9 @@ public class Purchaserecord implements Serializable {
     //有效性：1：有效；2：无效
     private Integer valid;
     //开课时间
-    private Date startTime;
+    private String startTime;
     //结课时间
-    private Date endTime;
+    private String endTime;
     //状态：1：有效；2失效
     private Integer status;
     //get set 方法
@@ -52,18 +53,23 @@ public class Purchaserecord implements Serializable {
     public  Integer getValid(){
         return this.valid;
     }
-    public void setStartTime (Date  startTime){
-        this.startTime=startTime;
+
+    public String getStartTime() {
+        return startTime;
     }
-    public  Date getStartTime(){
-        return this.startTime;
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
-    public void setEndTime (Date  endTime){
-        this.endTime=endTime;
+
+    public String getEndTime() {
+        return endTime;
     }
-    public  Date getEndTime(){
-        return this.endTime;
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
+
     public void setStatus (Integer  status){
         this.status=status;
     }

@@ -16,6 +16,8 @@
         <module>axedu.school</module>
         <module>axedu.order</module>
         <module>axedu.gateway</module>
+        <module>axedu.purchaserecord</module>
+        <module>axedu.purchaserecord.api</module>
     </modules>
 
     <parent>

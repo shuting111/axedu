@@ -20,8 +20,4 @@ public interface TaskhistoryMapper {
 
 	public Integer updateTaskhistory(Taskhistory taskhistory)throws Exception;
 
-	public Integer deleteTaskhistoryById(@Param(value = "id") Long id)throws Exception;
-
-	public Integer batchDeleteTaskhistory(Map<String, List<String>> params);
-
 }

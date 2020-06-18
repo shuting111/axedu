@@ -1,6 +1,7 @@
 package com.zb.pojo;
 import java.io.Serializable;
 import java.util.Date;
+
 /***
 *   
 */
@@ -8,7 +9,7 @@ public class Taskhistory implements Serializable {
     //任务id
     private Integer taskId;
     //创建时间
-    private Date createTime;
+    private String createTime;
     //交换机名称
     private String myExchange;
     //routingkey
@@ -26,12 +27,15 @@ public class Taskhistory implements Serializable {
     public  Integer getTaskId(){
         return this.taskId;
     }
-    public void setCreateTime (Date  createTime){
-        this.createTime=createTime;
+
+    public String getCreateTime() {
+        return createTime;
     }
-    public  Date getCreateTime(){
-        return this.createTime;
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
+
     public void setMyExchange (String  myExchange){
         this.myExchange=myExchange;
     }
