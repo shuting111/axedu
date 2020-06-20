@@ -185,7 +185,7 @@
                      #{noticePhone},
                      #{noticeEmail},
                      now(),
-                     #{endTime},
+                     DATE_ADD(NOW(),INTERVAL 1 YEAR),
                     #{number})
     </insert>
 

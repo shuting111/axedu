@@ -20,4 +20,17 @@ public interface PurchaserecordMapper {
 
 	public Integer updatePurchaserecord(Purchaserecord purchaserecord)throws Exception;
 
+	/**
+	 * 修改记录表中过期课程状态
+	 * @return
+	 */
+	public Integer updatePurchaserecordStatus();
+
+	/**
+	 * 查询表中有无该数据
+	 * @param param
+	 * @return
+	 */
+	public Purchaserecord findByMap(Map<String,Object>param);
+
 }

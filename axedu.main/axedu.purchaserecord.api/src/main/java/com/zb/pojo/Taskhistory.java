@@ -7,7 +7,7 @@ import java.util.Date;
 */
 public class Taskhistory implements Serializable {
     //任务id
-    private Integer taskId;
+    private String taskId;
     //创建时间
     private String createTime;
     //交换机名称
@@ -21,11 +21,14 @@ public class Taskhistory implements Serializable {
     //状态
     private Integer status;
     //get set 方法
-    public void setTaskId (Integer  taskId){
-        this.taskId=taskId;
+
+
+    public String getTaskId() {
+        return taskId;
     }
-    public  Integer getTaskId(){
-        return this.taskId;
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
     public String getCreateTime() {

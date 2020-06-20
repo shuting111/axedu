@@ -24,4 +24,6 @@ public interface TaskMapper {
 
 	public Integer updateVersion(Task task);
 
+	public Integer deleteTask(@Param("taskId") String taskId);
+
 }

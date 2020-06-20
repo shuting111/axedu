@@ -12,7 +12,7 @@ public interface TaskhistoryMapper {
 
 	public Taskhistory getTaskhistoryById(@Param(value = "id") Long id)throws Exception;
 
-	public List<Taskhistory>	getTaskhistoryListByMap(Map<String, Object> param)throws Exception;
+	public List<Taskhistory>getTaskhistoryListByMap(Map<String, Object> param)throws Exception;
 
 	public Integer getTaskhistoryCountByMap(Map<String, Object> param)throws Exception;
 

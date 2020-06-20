@@ -116,6 +116,7 @@ public class OrderServiceImpl implements OrderService {
                 task.setMyRoutingKey("addchoosecourse");
                 task.setTaskId(IdWorker.getId());
                 Map<String,Object>param = new HashMap<>();
+                param.put("purchId",IdWorker.getId());
                 param.put("goodsId",order.getGoodsId());
                 param.put("userId",order.getUserId());
                 param.put("price",order.getPayAmount());

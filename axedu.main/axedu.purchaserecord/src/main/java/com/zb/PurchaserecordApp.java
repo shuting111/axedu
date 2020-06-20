@@ -1,5 +1,6 @@
 package com.zb;
 
+import com.zb.service.PurchaserecordService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -19,6 +20,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class PurchaserecordApp {
     public static void main(String[] args) {
-        SpringApplication.run(PurchaserecordApp.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(PurchaserecordApp.class, args);
+        PurchaserecordService bean = run.getBean(PurchaserecordService.class);
+        bean.updatePurchaserecordStatus();
     }
 }

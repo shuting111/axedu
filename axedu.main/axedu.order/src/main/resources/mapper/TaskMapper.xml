@@ -140,4 +140,8 @@
                         </if>
         </trim>
     </update>
+
+    <delete id="deleteTask">
+        delete from task where taskId=#{taskId}
+    </delete>
 </mapper>

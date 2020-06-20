@@ -7,7 +7,7 @@ import java.util.Date;
 */
 public class Purchaserecord implements Serializable {
     //
-    private Integer purchId;
+    private String purchId;
     //课程编号
     private Integer goodsId;
     //用户编号
@@ -23,12 +23,15 @@ public class Purchaserecord implements Serializable {
     //状态：1：有效；2失效
     private Integer status;
     //get set 方法
-    public void setPurchId (Integer  purchId){
-        this.purchId=purchId;
+
+    public String getPurchId() {
+        return purchId;
     }
-    public  Integer getPurchId(){
-        return this.purchId;
+
+    public void setPurchId(String purchId) {
+        this.purchId = purchId;
     }
+
     public void setGoodsId (Integer  goodsId){
         this.goodsId=goodsId;
     }

@@ -16,7 +16,7 @@
         from taskhistory
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
-                and id=#{id}
+                and taskId=#{id}
             </if>
         </trim>
     </select>
@@ -107,7 +107,7 @@
 
     <update id="updateTaskhistory" parameterType="com.zb.pojo.Taskhistory">
         update taskhistory
-        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+        <trim prefix="set" suffixOverrides="," suffix="where taskId=#{taskId}">
                         <if test="taskId != null and taskId!=''">
                             taskId=#{taskId},
                         </if>

@@ -68,5 +68,10 @@ public class TaskServiceImpl implements TaskService {
         return 0;
     }
 
+    @Override
+    public Integer deleteTask(String taskId) {
+        return taskMapper.deleteTask(taskId);
+    }
+
 
 }

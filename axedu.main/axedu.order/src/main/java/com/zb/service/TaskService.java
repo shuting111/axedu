@@ -40,4 +40,11 @@ public interface TaskService {
      * @return
      */
     public Integer updateTask(Task task);
+
+    /**
+     * 删除任务
+     * @param taskId
+     * @return
+     */
+    public Integer deleteTask(String taskId);
 }

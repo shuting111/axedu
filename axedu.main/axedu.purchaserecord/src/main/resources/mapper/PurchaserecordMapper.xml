@@ -115,9 +115,17 @@
                     #{status})
     </insert>
 
+    <update id="updatePurchaserecordStatus">
+        UPDATE purchaserecord SET STATUS = 1 WHERE endTime &lt; now()
+    </update>
+
+    <select id="findByMap" resultType="com.zb.pojo.Purchaserecord">
+        select * from purchaserecord where goodsId=#{goodsId} and userId =#{userId}
+    </select>
+
     <update id="updatePurchaserecord" parameterType="com.zb.pojo.Purchaserecord">
         update purchaserecord
-        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+        <trim prefix="set" suffixOverrides="," suffix="where purchId=#{purchId}">
                         <if test="purchId != null and purchId!=''">
                             purchId=#{purchId},
                         </if>
