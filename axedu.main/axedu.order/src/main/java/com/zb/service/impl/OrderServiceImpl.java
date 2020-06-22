@@ -173,7 +173,7 @@ public class OrderServiceImpl implements OrderService {
                 amqpTemplate.convertAndSend(DelayRabbitTempConfig.ORDER_DELAY_EXCHANGE, DelayRabbitTempConfig.ORDER_DELAY_ROUTING_KEY, delayData, new MessagePostProcessor() {
                     @Override
                     public Message postProcessMessage(Message message) throws AmqpException {
-                        message.getMessageProperties().setExpiration(2*60*1000+"");
+                        message.getMessageProperties().setExpiration(5*60*1000+"");
                         return message;
                     }
                 });
