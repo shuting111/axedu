@@ -20,6 +20,11 @@ public interface GradeMapper {
 
 	public Integer updateGrade(Grade grade)throws Exception;
 
+	//查询全部年级
+	public List<Grade> findGrade();
+
+
+
 
 
 }

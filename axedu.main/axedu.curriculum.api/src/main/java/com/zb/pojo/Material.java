@@ -13,8 +13,7 @@ public class Material implements Serializable {
     private Integer subjectid;
     //创建时间
     private String createtime;
-    //整理的老师
-    private Integer teacherid;
+
     //七牛云文件地址
     private String fileUrl;
     //get set 方法
@@ -42,12 +41,7 @@ public class Material implements Serializable {
     public  String getCreatetime(){
         return this.createtime;
     }
-    public void setTeacherid (Integer  teacherid){
-        this.teacherid=teacherid;
-    }
-    public  Integer getTeacherid(){
-        return this.teacherid;
-    }
+
     public void setFileUrl (String  fileUrl){
         this.fileUrl=fileUrl;
     }

@@ -53,4 +53,16 @@ public class MaterialServiceImpl implements MaterialService {
         }
         return null;
     }
+
+    @Override
+    public int insertMaterialById(Material material) {
+        try {
+            return materialMapper.insertMaterial(material);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+
 }

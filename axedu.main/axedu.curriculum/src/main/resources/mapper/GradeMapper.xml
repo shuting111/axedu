@@ -53,6 +53,11 @@
                 </if>
         </trim>
     </select>
+    <select id="findGrade" resultType="com.zb.pojo.Grade">
+    <![CDATA[
+        SELECT *  FROM  `grade` WHERE LEVEL <> 0
+        ]]>
+    </select>
 
     <insert id="insertGrade" parameterType="com.zb.pojo.Grade">
         insert into grade(

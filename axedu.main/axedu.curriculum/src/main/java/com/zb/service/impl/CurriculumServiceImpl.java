@@ -36,11 +36,10 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
+
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -328,6 +327,7 @@ public class CurriculumServiceImpl implements CurriculumService {
 
 
     //监听  增加点击量发起的队列
+    @Override
     @RabbitListener(queues = RabbitConfig.QUEUE_room)
     public void reciveHits(Map<String,Object> param, Message message, Channel channel){
         if(param.size()>0){
@@ -347,6 +347,7 @@ public class CurriculumServiceImpl implements CurriculumService {
     }
 
     @Scheduled(cron = "00 21 22 * * ?")
+    @Override
     public void guessLike(){
         String curriculum = redisUtils.get("curriculum").toString();
         List<Curriculum> list = JSON.parseArray(curriculum,Curriculum.class);
@@ -365,4 +366,11 @@ public class CurriculumServiceImpl implements CurriculumService {
             }
         }
     }
+
+    @Override
+    public List<Curriculum> findIsDiscount() {
+        return curriculumMapper.findIsDiscount();
+    }
+
+
 }

@@ -9,7 +9,9 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.client.RestTemplate;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @author 王淑婷
@@ -22,6 +24,8 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 @EnableScheduling  //开启定时任务
 @EnableCaching //开启缓存
+@EnableTransactionManagement
+@EnableSwagger2
 public class CurriculumApp {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(CurriculumApp.class);

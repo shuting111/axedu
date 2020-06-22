@@ -30,3 +30,14 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
 myes:
   host: 127.0.0.1:9200
+
+qiniu:
+  accessKey: yhcR6v8uCVYKagIyAdIXZP178nX38Ksqv278MhbU
+  secretKey: HIrDxLh5XZS1iYlnj_tusqSbQjnCx4PnbZ_dB1qI
+  bucket: axedu
+  path: http://qbbxbtow0.bkt.clouddn.com/
+
+logging:
+  level: info
+  path: ./logs
+  config: classpath:logback-dev.xml

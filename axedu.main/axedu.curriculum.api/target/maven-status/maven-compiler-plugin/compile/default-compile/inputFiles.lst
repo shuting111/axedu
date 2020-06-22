@@ -1,6 +1,8 @@
-F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\config\RabbitConfig.java
 F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\feign\CurriculumFeignClient.java
+F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\form\CurriArgs.java
+F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\pojo\Advert.java
 F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\pojo\Grade.java
+F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\pojo\Material.java
 F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\pojo\GradeSubject.java
 F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\pojo\Subject.java
 F:\testgit\axedu.main\axedu.curriculum.api\src\main\java\com\zb\pojo\Curriculum.java
