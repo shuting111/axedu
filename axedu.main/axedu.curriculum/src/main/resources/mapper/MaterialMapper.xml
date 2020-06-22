@@ -10,7 +10,6 @@
                 gradeid as gradeid,
                 subjectid as subjectid,
                 createtime as createtime,
-                teacherid as teacherid,
                 fileUrl as fileUrl
         from material
         <trim prefix="where" prefixOverrides="and | or">
@@ -26,7 +25,6 @@
                 gradeid as gradeid,
                 subjectid as subjectid,
                 createtime as createtime,
-                teacherid as teacherid,
                 fileUrl as fileUrl
         from material
         <trim prefix="where" prefixOverrides="and | or">
@@ -39,12 +37,8 @@
                 <if test="subjectid != null and subjectid!=''">
                     and subjectid=#{subjectid}
                 </if>
-                <if test="createtime != null and createtime!=''">
-                    and createtime=#{createtime}
-                </if>
-                <if test="teacherid != null and teacherid!=''">
-                    and teacherid=#{teacherid}
-                </if>
+
+                    and createtime=now()
                 <if test="fileUrl != null and fileUrl!=''">
                     and fileUrl=#{fileUrl}
                 </if>
@@ -66,12 +60,8 @@
                 <if test="subjectid != null and subjectid!=''">
                     and subjectid=#{subjectid}
                 </if>
-                <if test="createtime != null and createtime!=''">
-                    and createtime=#{createtime}
-                </if>
-                <if test="teacherid != null and teacherid!=''">
-                    and teacherid=#{teacherid}
-                </if>
+                    and createtime=now()
+
                 <if test="fileUrl != null and fileUrl!=''">
                     and fileUrl=#{fileUrl}
                 </if>
@@ -83,13 +73,11 @@
                         gradeid,
                         subjectid,
                         createtime,
-                        teacherid,
                         fileUrl)
         values(
                      #{gradeid},
                      #{subjectid},
-                     #{createtime},
-                     #{teacherid},
+                     now(),
                     #{fileUrl})
     </insert>
 
@@ -104,9 +92,6 @@
                         </if>
                         <if test="createtime != null and createtime!=''">
                             createtime=#{createtime},
-                        </if>
-                        <if test="teacherid != null and teacherid!=''">
-                            teacherid=#{teacherid},
                         </if>
                         <if test="fileUrl != null and fileUrl!=''">
                             fileUrl=#{fileUrl}

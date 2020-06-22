@@ -321,4 +321,10 @@
                         </if>
         </trim>
     </update>
+
+    <select id="findIsDiscount" resultType="com.zb.pojo.Curriculum">
+        select * from curriculum where originalPrice!=presentPrice
+    </select>
+
+
 </mapper>

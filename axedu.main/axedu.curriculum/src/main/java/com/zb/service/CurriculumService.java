@@ -1,11 +1,14 @@
 package com.zb.service;
 
+import com.rabbitmq.client.Channel;
 import com.zb.form.CurriArgs;
 import com.zb.pojo.Advert;
 import com.zb.pojo.Curriculum;
 import com.zb.util.PageUtil;
+import org.springframework.amqp.core.Message;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 王淑婷
@@ -31,6 +34,17 @@ public interface CurriculumService {
 
     //添加课程
     public int insertCurriculum(Curriculum curriculum);
+    //监听点击量的MQ
+    public void reciveHits(Map<String,Object> param, Message message, Channel channel);
+    //猜你喜欢定时函数
+    public void guessLike();
+
+    /**
+     * 查询所有优惠课程
+     */
+    public List<Curriculum>findIsDiscount();
+
+
 
 
 

@@ -200,4 +200,11 @@ public class CurriculumController {
         return curriculumService.insertCurriculum(curriculum);
     }
 
+    //向订单模块提供特价课程的接口
+    @GetMapping("/findIsDiscount")
+    public List<Curriculum> findIsDiscount(){
+        return curriculumService.findIsDiscount();
+    }
+
+
 }

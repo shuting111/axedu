@@ -1,6 +1,9 @@
 package com.zb.service;
 
 
+import com.zb.pojo.Subject;
+
+import java.util.List;
 
 /**
  * @author 王淑婷
@@ -9,5 +12,6 @@ package com.zb.service;
  * @Version V1.0
  */
 public interface SubjectService {
-
+    //查询全部课程
+    public List<Subject> findSubject();
 }

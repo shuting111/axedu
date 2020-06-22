@@ -56,4 +56,9 @@ public class GradeServiceImpl implements GradeService {
         }
         return list;
     }
+
+    @Override
+    public List<Grade> findGrade() {
+        return gradeMapper.findGrade();
+    }
 }

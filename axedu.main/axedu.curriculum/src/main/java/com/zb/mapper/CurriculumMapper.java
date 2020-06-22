@@ -20,6 +20,14 @@ public interface CurriculumMapper {
 
 	public Integer updateCurriculum(Curriculum curriculum)throws Exception;
 
+	/**
+	 * 查找特价课程
+	 * @return
+	 */
+	public List<Curriculum>  findIsDiscount();
+
+
+
 
 
 

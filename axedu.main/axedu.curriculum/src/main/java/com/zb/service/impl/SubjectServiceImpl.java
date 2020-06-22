@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -21,8 +22,16 @@ import java.util.List;
 public class SubjectServiceImpl implements SubjectService {
     @Autowired(required = false)
     private SubjectMapper subjectMapper;
-    @Autowired(required = false)
-    private RedisUtil redisUtil;
 
 
+
+    @Override
+    public List<Subject> findSubject() {
+        try {
+            return subjectMapper.getSubjectListByMap(new HashMap<>());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

@@ -1,8 +1,6 @@
-com\zb\config\EsConfig.class
 com\zb\feign\CurriculumFeignClient.class
 com\zb\pojo\GradeSubject.class
 com\zb\pojo\Subject.class
 com\zb\pojo\Grade.class
 com\zb\pojo\Area.class
 com\zb\pojo\Curriculum.class
-com\zb\config\RabbitConfig.class
