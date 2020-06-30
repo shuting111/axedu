@@ -1,9 +1,11 @@
 package com.zb.controller;
 
 import com.zb.pojo.Advert;
+import com.zb.service.AdvertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -16,13 +18,13 @@ import java.util.List;
  */
 @RestController
 @CrossOrigin
-public class AdvertService {
+public class AdvertController {
     @Autowired
     private AdvertService advertService;
 
     //根据广告的类型查询对应的广告图片集合
-    @GetMapping("/getAdvertUrl")
-    public List<Advert> getAdvertUrl(Integer id){
+    @GetMapping("/getAdvertUrl/{id}")
+    public List<Advert> getAdvertUrl(@PathVariable("id") Integer id){
         return advertService.getAdvertUrl(id);
     }
 }
