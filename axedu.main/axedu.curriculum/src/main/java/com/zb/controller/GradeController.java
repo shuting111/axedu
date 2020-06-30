@@ -27,7 +27,7 @@ public class GradeController {
     public List<Grade> findListByParentId(@PathVariable("pid") Integer pid){
         return gradeService.findListByParentId(pid);
     }
-
+    //年级的全部查询
     @GetMapping("/findGrade")
     public List<Grade> findGrade(){
         return gradeService.findGrade();
