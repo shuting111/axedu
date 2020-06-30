@@ -4,7 +4,7 @@ import com.zb.feign.CurriculumFeignClient;
 import com.zb.mapper.CurriculumMapper;
 import com.zb.pojo.Curriculum;
 import com.zb.service.CurriculumService;
-import com.zb.service.OrderService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ public class CurriculumServiceImpl implements CurriculumService {
 
     @Override
     public Curriculum findCurriculumById(Integer id) {
-        return curriculumFeignClient.findCurriculumById(id);
+        return curriculumFeignClient.findCurriById(id);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class CurriculumServiceImpl implements CurriculumService {
 
     @Override
     public int updateBanrong(Integer id, Integer banrong) {
-        Curriculum curriculum = curriculumFeignClient.findCurriculumById(id);
+        Curriculum curriculum = curriculumFeignClient.findCurriById(id);
         if((curriculum.getBanrong()-banrong)>0){
             return curriculumMapper.updateBanrong(id,banrong);
         }else{
